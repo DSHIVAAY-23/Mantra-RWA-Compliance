@@ -379,4 +379,4 @@ Result: RWA token minted, privacy preserved
 
 ---
 
-*Built with ❤️ for the MANTRA Ecosystem*
+*Built for the MANTRA Ecosystem*
