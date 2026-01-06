@@ -18,7 +18,7 @@ The result is a privacy-preserving compliance layer that enables institutions to
 
 ### 1.1 The RWA Opportunity
 
-Real-World Asset tokenization promises to unlock trillions in previously illiquid assets:
+Real-World Asset Tokenization targets a multi-trillion dollar opportunity by making previously illiquid assets accessible on-chain. Example sectors include::
 - **$10T** in global real estate
 - **$3T** in private equity and venture capital
 - **$2T** in corporate bonds
