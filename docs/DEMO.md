@@ -18,8 +18,7 @@ This document demonstrates the complete, working flow of the Z-RWA system - from
 ### 1. Off-Chain: Proof Generation (`circuits/compliance-proofs/`)
 
 #### Guest Program (ZK Circuit)
-**File**: `circuits/compliance-proofs/crates/circuits/src/main.rs`  
-**Size**: 40 lines  
+**File**: `circuits/compliance-proofs/crates/circuits/src/main.rs`   
 **Role**: The RISC-V program that runs inside the SP1 zkVM
 
 ```rust
@@ -34,7 +33,6 @@ This document demonstrates the complete, working flow of the Z-RWA system - from
 
 #### Proof Generation Script
 **File**: `circuits/compliance-proofs/crates/mantra-script/src/mantra.rs`  
-**Size**: 113 lines  
 **Role**: Orchestrates proof generation using SP1 SDK
 
 **Key Functions**:
@@ -65,7 +63,6 @@ tokio = { version = "1", features = ["full"] }
 
 #### Main Contract
 **File**: `contracts/verifier/src/contract.rs`  
-**Size**: 148 lines  
 **Role**: CosmWasm contract that verifies SP1 proofs on-chain
 
 **Key Functions**:
@@ -132,7 +129,6 @@ cw2 = "1.1.2"
 
 #### Build & Demo Script
 **File**: `scripts/run_demo_flow.sh`  
-**Size**: 38 lines  
 **Role**: End-to-end automation of build + proof generation
 
 **Flow**:
@@ -170,7 +166,6 @@ cargo build --release --target wasm32-unknown-unknown
 **Output**:
 ```
 ✅ Contract Built: artifacts/verifier.wasm
-Size: 201KB
 Target: wasm32-unknown-unknown
 Optimization: LTO enabled, single codegen unit
 ```
@@ -427,8 +422,7 @@ cat proof_output.json
 
 ---
 
-**Status**: ✅ Production Ready - Real ZK Proofs Generated  
-**Last Updated**: 2026-01-06  
+**Status**: Production Ready - Real ZK Proofs Generated  
 **Proof System**: SP1 Groth16 (BN254 curve)  
 **Proof Size**: 260 bytes (verified)  
 **Contract**: artifacts/verifier.wasm (201KB)  
