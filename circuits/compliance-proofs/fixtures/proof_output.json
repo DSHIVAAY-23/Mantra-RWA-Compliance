@@ -1,0 +1,10 @@
+{
+  "document_hash": "123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0",
+  "metadata": {
+    "accreditation": "QUALIFIED_INSTITUTIONAL",
+    "jurisdiction": "VARA_DUBAI",
+    "proof_system": "SP1_GROTH16"
+  },
+  "proof": "CQaQkBy/8UGJB1k2AFuzo6IzxQbDWj78/srKRVknJkRytwFfHWB7bWM6xHMaDPzzlTu4ZOefjklK4hF+6oxfH4wovVwhaazjpIyyNNVxZh+xTcLlkGBvLTM87XAXydYGMQ7b4AqZdzqjG5lMobb4sBCm53d6RYNwytAiQxflN6TD7BngFbhqvme6YPV54oywTeGeIH34OANZ3wi3bTr9IUjt/Z4j/mujPsjp5eSxHeBiG2lmcgy28MR0rz8Rdtc31JP5wCAtpHACW/iz+Cowz1c6qOqvLVhhAbv18woK6GvW/4mHI1JfmzG7cx8zDbH1q7T08HdxHtIb5LRmQ6fdi5ZsB7c=",
+  "public_values": "123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0010000803f"
+}

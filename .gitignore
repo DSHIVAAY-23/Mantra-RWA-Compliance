@@ -1,0 +1,49 @@
+# Rust build artifacts
+target/
+**/target/
+Cargo.lock
+
+# Build outputs
+*.wasm
+artifacts/*.wasm
+!artifacts/verifier.wasm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+demo_output.log
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# SP1 build artifacts
+*.elf
+!circuits/compliance-proofs/crates/circuits/elf/riscv32im-succinct-zkvm-elf
+
+# Proof outputs (except cached fixtures)
+proof_output.json
+mantra_proof.json
+!circuits/compliance-proofs/fixtures/proof_output.json
+
+# Test artifacts
+coverage/
+*.profdata
