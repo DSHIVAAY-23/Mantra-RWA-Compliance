@@ -238,37 +238,38 @@ Result: RWA token minted, privacy preserved
 
 #### Use of Funds
 
-**Smart Contract Development** ($20,000)
-- Finalize CosmWasm verifier contract
-- Groth16 proof verification optimization
-- MTS integration and testing
-- Security hardening
+**Smart Contract Development ($20,000)**
+- Finalization of CosmWasm Verifier logic
+- Implementation of MTS (Mantra Token Service) Adapter
+- Comprehensive Internal Testing Suite (Unit/Fuzzing)
+- *Note: Focus on test coverage prior to external audit*
 
-**ZK Circuit Optimization** ($15,000)
-- SP1 prover performance improvements
-- Circuit complexity reduction
-- Proof generation speed optimization
-- Documentation and examples
+**ZK Circuit Optimization ($15,000)**
+- Guest Program Cycle Reduction (Optimizing RAG logic for SP1)
+- Latency reduction for proof generation
+- Memory optimization for client-side proving
+- Documentation and circuit examples
 
-**Integration & Testing** ($10,000)
-- MANTRA DID module integration
-- Compliance module hooks
-- Testnet deployment and testing
+**Integration & Testing ($10,000)**
+- Full integration with x/did and x/compliance modules
+- Testnet Deployment & Stress Testing
 - End-to-end flow validation
 
-**Documentation & Outreach** ($5,000)
-- Developer documentation
-- Integration guides
+**Documentation & Education ($5,000)**
+- Developer SDK documentation
+- "Zero to Hero" integration guide for Asset Issuers
 - Demo videos and tutorials
-- Community engagement
 
 #### Deliverables
 
-✅ **Production-ready CosmWasm contracts** on MANTRA Testnet  
-✅ **Optimized SP1 circuits** with <10s proof generation  
-✅ **Complete integration** with DID, Compliance, and MTS  
-✅ **Comprehensive documentation** for developers  
-✅ **Demo application** showcasing the full flow  
+✅ Production-ready CosmWasm contracts on MANTRA Testnet  
+✅ Optimized SP1 circuits with <10s proof generation  
+✅ Complete integration with DID, Compliance, and MTS  
+✅ Comprehensive documentation for developers  
+✅ Demo application showcasing the full flow  
+
+> [!NOTE]
+> This grant covers the Phase 2 Testnet MVP. A separate budget for a Third-Party Security Audit (Trail of Bits / Zellic) will be raised via a follow-on Strategic Round or Phase 3 Grant prior to Mainnet launch.
 
 #### Timeline
 
