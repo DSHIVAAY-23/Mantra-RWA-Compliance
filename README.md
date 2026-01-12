@@ -198,4 +198,4 @@ Apache 2.0
 
 ---
 
-**Built with ❤️ for the MANTRA Ecosystem**
+**Built for the MANTRA Ecosystem**
