@@ -1,3 +1,17 @@
+<div style="text-align: center; margin-top: 40vh;">
+
+# Z-RWA Technical Litepaper
+
+## The Privacy Layer for MANTRA Chain
+
+**January 2026**
+
+</div>
+
+<div style="page-break-after: always;"></div>
+
+---
+
 # Z-RWA: Enabling Confidential Institutional Assets on MANTRA
 
 **A Technical and Strategic Overview**
