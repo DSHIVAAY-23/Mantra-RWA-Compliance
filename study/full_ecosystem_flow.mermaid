@@ -1,0 +1,71 @@
+graph TD
+    %% Actors
+    User([User / Investor])
+    Admin([Protocol Admin])
+    
+    %% External Nodes
+    subgraph ProvenanceChain [Provenance Blockchain]
+        P8eMarker[Native Marker Module]
+        P8eName[Name Module]
+    end
+
+    subgraph External [External / Top-Level]
+        Verifier[Verifier Contract]
+        Factory[Factory Contract]
+        PriceFeed[Price Feed Oracle]
+        Axelar[Axelar Gateway]
+    end
+
+    %% Core Application Layer
+    subgraph AssetLayer [Asset Application Layer]
+        CustomMarker[Custom Marker Core]
+        Fund[Fund Contract]
+        Bond[Treasury Bond Contract]
+        
+        %% Local State within Contracts
+        MarkerRules[(Whitelist/Rules)]
+    end
+    
+    %% Compliance
+    subgraph IdentityLayer [Mantra Identity]
+        DidMod[x/did]
+        CompMod[x/compliance]
+    end
+    
+    %% Relationships
+    
+    %% 1. Instantiation
+    Admin -->|Instantiate| Factory
+    Factory -->|DeployToken| CustomMarker
+    Factory -->|Deploy| Fund
+    
+    %% 2. Compliance Flow
+    User -->|Submit Proof| Verifier
+    Verifier -->|Verify & Mint| CustomMarker
+    Verifier -.->|Check| DidMod
+    
+    %% 3. Asset Management
+    CustomMarker -->|Manage Supply| P8eMarker
+    CustomMarker -->|Check Rules| MarkerRules
+    CustomMarker -->|Register| P8eName
+    
+    %% 4. Investment Flow
+    User -->|Invest| Fund
+    Fund -->|Get NAV| PriceFeed
+    Fund -->|Mint/Burn Shares| CustomMarker
+    
+    %% 5. Bond Flow
+    User -->|Buy Bond| Bond
+    Bond -->|Pay Coupon| CustomMarker
+    
+    %% 6. Interop
+    CustomMarker -->|Bridge| Axelar
+    
+    %% Styles
+    classDef contract fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef module fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef external fill:#eee,stroke:#999,stroke-dasharray: 5 5;
+    
+    class Verifier,Factory,PriceFeed,Axelar,CustomMarker,Fund,Bond contract;
+    class P8eMarker,P8eName,DidMod,CompMod module;
+    class User,Admin external;

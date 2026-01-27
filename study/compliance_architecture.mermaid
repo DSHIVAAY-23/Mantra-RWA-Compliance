@@ -1,0 +1,34 @@
+flowchart TD
+    User([User / Client])
+    Prover([SP1 Prover (Local)])
+    
+    subgraph "Mantra Compliance Triangle"
+        Verifier[Verifier Contract]
+        Marker[Custom Marker Contract]
+        MantraDid[Mantra x/did & x/compliance]
+    end
+
+    User -->|1. Generate Proof| Prover
+    Prover -->|2. Proof + PubInputs| Verifier
+    
+    Verifier -->|3. Verify Proof (SP1/Groth16)| Verifier
+    Verifier -.->|4. Check Identity (Mock/Future)| MantraDid
+    
+    Verifier -->|5. ExecuteMsg::Mint| Marker
+    
+    subgraph "Marker Local Compliance"
+        Rules[Rules: Whitelist, Freeze, Limits]
+        State[State: DENOM_CONFIG, WHITELIST]
+    end
+    
+    Marker -->|6. Check Local Rules| Rules
+    Rules -->|7. Query State| State
+    Rules -->|8. Mint Tokens| Marker
+    
+    classDef contract fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef module fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef actor fill:#ff9,stroke:#333,stroke-width:2px;
+    
+    class Verifier,Marker contract;
+    class MantraDid module;
+    class User,Prover actor;
